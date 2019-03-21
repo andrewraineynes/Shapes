@@ -1783,6 +1783,7 @@ p.entry-meta {
 
 .masonry-page.full-width-content .content {
     width: 100%;
+    margin-top: 90px;
 }
 
 .masonry-page .content .entry {
@@ -1876,24 +1877,30 @@ p.entry-meta {
 
     .gutter-sizer {
         width: 2%;
+        
     }
 
-    .grid-sizer,
-    .masonry-page .content .entry {
+    .grid-sizer, .masonry-page .content .entry {
         width: 49%; /* 2 columns */
         margin-bottom: 1%;
     }
 
+    
 }
 
 @media only screen and (min-width: 768px) {
 
     .grid-sizer,
     .masonry-page .content .entry {
-        width: 32%; /* 3 columns. (100-4)/3 = 32. Where 4 = (Number of columns - 1) x gutter width */
+        width: 31%; /* 3 columns. (100-4)/3 = 32. Where 4 = (Number of columns - 1) x gutter width */
     }
 
 }
+
+
+
+
+
 
 @media only screen and (min-width: 960px) {
 
@@ -2021,6 +2028,7 @@ img {
     padding: 52px 0;
     background-color: #2e74ba;
     text-align: center;
+    margin-bottom: -90px;
 
 }
 
@@ -2539,11 +2547,15 @@ position:relative;
 
 
 
-.content-sidebar-wrap{
+.content-sidebar-wrap {
     
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .site-inner {
     margin-top: 0px;
+}
+
+.site-inner:before, .site-inner:after {
+    margin-top: 0px!important;
 }

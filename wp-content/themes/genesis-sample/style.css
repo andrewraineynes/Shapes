@@ -443,12 +443,13 @@ input[type="submit"]:hover,
 .button:focus,
 .button:hover {
 	background-color: #0073e5;
-	color: #fff;
+	color: #333;
 }
 
 .entry-content .button:focus,
 .entry-content .button:hover {
 	color: #fff;
+    transition: 1s;
 }
 
 .button {
@@ -689,7 +690,7 @@ th:first-child {
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #0073e5;
+	color: #333;
 }
 
 .widget-title {
@@ -1784,6 +1785,7 @@ p.entry-meta {
 .masonry-page.full-width-content .content {
     width: 100%;
     margin-top: 90px;
+    float:left;
 }
 
 .masonry-page .content .entry {
@@ -1810,6 +1812,16 @@ p.entry-meta {
 
 .masonry-page .content .entry-content {
     padding: 20px;
+}
+
+a.entry-title-link:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+a.entry-title-link {
+    color: #333;
+   
 }
 
 .masonry-page .content .entry-title {
@@ -1885,8 +1897,18 @@ p.entry-meta {
         margin-bottom: 1%;
     }
 
+
+
     
 }
+
+@media only screen and (max-width: 960px) {
+
+    .masonry-page .content-sidebar-wrap {
+        margin-top: -110px;
+    }
+}
+
 
 @media only screen and (min-width: 768px) {
 
@@ -1896,9 +1918,6 @@ p.entry-meta {
     }
 
 }
-
-
-
 
 
 
@@ -1948,10 +1967,7 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
-.masonry-page .content .entry:nth-child(even), .masonry-page .content .entry:nth-child(even) a, .masonry-page .content .entry:nth-child(even) p {
-    background: #2e74ba!important;
-    color: #fff;
-}
+
 
 aside#genesis-sidebar-primary {
     border: 3px solid;
@@ -1989,11 +2005,11 @@ input, select, textarea {
     font-size: 18px;
     font-weight: 600;
     padding: 23px;
-    width: 50%;
+    width: 70%;
 }
 
 input#subbutton {
-    padding: 20px;
+    padding: 18px;
     background: none;
     border: 3px solid;
     border-radius: 0;
@@ -2448,7 +2464,7 @@ aside.widget-area {
 @media only screen and (max-width: 400px) {
 
     .post-navigation-content {
-        padding: 20px 50px;
+        padding: 0px;
     }
 
 }
@@ -2558,4 +2574,397 @@ position:relative;
 
 .site-inner:before, .site-inner:after {
     margin-top: 0px!important;
+}
+
+section.mailing-list-area {
+    margin: 0 auto;
+    max-width: 1140px;
+    color: #fff;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+
+.masonry-page .content .entry-title a:hover {
+	color: #333;
+}
+
+
+/* Custom styles by Sridhar */
+
+/****************************************************************
+	Pinterest-like Masonry layout for Posts page and archives
+****************************************************************/
+
+.masonry-page {
+	background-color: #eee;
+}
+
+.masonry-page.full-width-content .content {
+	width: 100%;
+}
+
+.masonry-page .content .entry {
+	padding: 10px;
+	background-color: #fff;
+}
+
+.gutter-sizer {
+	width: 0;
+}
+
+.grid-sizer,
+.masonry-page .content .entry {
+	width: 100%; /* 1 column */
+	margin-bottom: 30px;
+}
+
+.masonry-page .content .one-half,
+.masonry-page .content .one-third,
+.masonry-page .content .one-fourth,
+.masonry-page .content .one-sixth {
+	margin-left: 0;
+}
+
+.masonry-page .content .entry-content {
+	padding: 20px;
+}
+
+.masonry-page .content .entry-title {
+	font-size: 26px;
+	font-size: 2.6rem;
+}
+
+.masonry-page .content .entry-content p {
+	margin-bottom: 0;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.masonry-page .content .entry-content a.more-link {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.masonry-page .content .entry-footer {
+	margin-top: 10px;
+	padding: 20px 20px 10px 20px;
+	border-top: 1px dashed #ddd;
+}
+
+.masonry-page .content .entry-footer .entry-meta {
+	margin: 0;
+	padding: 0 0 10px 0;
+	border-top: none;
+}
+
+.masonry-page .content .entry-footer p.entry-meta {
+	font-size: 14px;
+}
+
+.masonry-page .content .entry-pagination {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.masonry-image {
+	vertical-align: top;
+	opacity: 1;
+	-webkit-backface-visibility: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=100)"; /* IE 8 */
+	filter: alpha(opacity=100); /* IE 4, 5, 6 and 7 */
+	zoom: 1; /* so the element "hasLayout" or, to trigger "hasLayout" set a width or height */
+	-webkit-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.masonry-image:hover {
+	opacity: 0.7;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=70)"; /* IE 8 */
+	filter : alpha(opacity=70); /* IE 4, 5, 6 and 7 */
+	zoom: 1; /* so the element "hasLayout" or, to trigger "hasLayout" set a width or height */
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 581px) {
+
+	.gutter-sizer {
+		width: 2%;
+	}
+
+	.grid-sizer,
+	.masonry-page .content .entry {
+		width: 49%; /* 2 columns */
+		margin-bottom: 2%;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	.grid-sizer,
+	.masonry-page .content .entry {
+		width: 32%; /* 3 columns. (100-4)/3 = 32. Where 4 = (Number of columns - 1) x gutter width */
+	}
+
+}
+
+@media only screen and (min-width: 960px) {
+
+	/* Site Header
+	--------------------------------------------- */
+
+	.site-header {
+		position: fixed;
+		width: 100%;
+		z-index: 9999;
+	}
+
+	/* Genesis Menu
+	--------------------------------------------- */
+
+	.genesis-nav-menu .menu-item {
+		display: inline-block;
+	}
+
+	.genesis-nav-menu .menu-item:focus,
+	.genesis-nav-menu .menu-item:hover {
+		position: relative;
+	}
+
+	.genesis-nav-menu > .menu-bold > a {
+		font-weight: 700;
+	}
+
+	.genesis-nav-menu > .menu-highlight > a {
+		background-color: #333;
+		border-radius: 3px;
+		color: #fff;
+		font-weight: 600;
+		margin-left: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.genesis-nav-menu > .menu-highlight > a:hover,
+	.genesis-nav-menu > .menu-highlight > a:focus {
+		background-color: #0073e5;
+	}
+
+	.genesis-responsive-menu .genesis-nav-menu .sub-menu,
+	.genesis-responsive-menu .genesis-nav-menu .sub-menu a {
+		width: 180px;
+	}
+
+	.genesis-nav-menu .sub-menu {
+		border-top: 1px solid #eee;
+		opacity: 0;
+		padding-left: 0;
+		position: absolute;
+		-webkit-transition: opacity .4s ease-in-out;
+		transition: opacity .4s ease-in-out;
+	}
+
+	.genesis-nav-menu .sub-menu a {
+		border: 1px solid #eee;
+		border-top: 0;
+		padding-bottom: 15px;
+		padding-top: 15px;
+	}
+
+	.genesis-nav-menu .sub-menu .sub-menu {
+		margin: -46px 0 0 179px;
+	}
+
+	/* Responsive Menu
+	--------------------------------------------- */
+
+	.genesis-responsive-menu {
+		display: block;
+		padding-top: 15px;
+	}
+
+	.menu-toggle,
+	.sub-menu-toggle {
+		display: none;
+		visibility: hidden;
+	}
+
+	/* Header Menu
+	--------------------------------------------- */
+
+	.nav-primary {
+		clear: none;
+		float: right;
+		width: auto;
+	}
+
+	.nav-primary .genesis-nav-menu a {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	/* Site-Inner
+	--------------------------------------------- */
+
+	.site-inner {
+		margin-top: 70px;
+		max-width: 1140px;
+	}
+
+	/* Content
+	--------------------------------------------- */
+
+	body .content {
+		float: left;
+		width: 100%;
+	}
+
+	body.masonry-page .content {
+		width: 100%;
+	}
+
+	.sidebar-content .content {
+		float: right;
+	}
+
+	.full-width-content .content,
+	.landing-page .content {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Sidebar
+	--------------------------------------------- */
+
+	.sidebar {
+		float: right;
+		width: 30%;
+	}
+
+	.sidebar-content .sidebar {
+		float: left;
+	}
+
+	/* Author Box
+	--------------------------------------------- */
+
+	.author-box {
+		background-color: #f5f5f5;
+		padding: 30px;
+	}
+
+	/* After Entry
+	--------------------------------------------- */
+
+	.after-entry {
+		padding: 40px 60px;
+	}
+
+	.after-entry .enews {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	/* Column Classes
+	--------------------------------------------- */
+
+	.five-sixths,
+	.four-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.three-sixths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds {
+		float: left;
+		margin-left: 2.564102564102564%;
+	}
+
+	.one-half,
+	.three-sixths,
+	.two-fourths {
+		width: 48.717948717948715%;
+	}
+
+	.one-third,
+	.two-sixths {
+		width: 31.623931623931625%;
+	}
+
+	.four-sixths,
+	.two-thirds {
+		width: 65.81196581196582%;
+	}
+
+	.one-fourth {
+		width: 23.076923076923077%;
+	}
+
+	.three-fourths {
+		width: 74.35897435897436%;
+	}
+
+	.one-sixth {
+		width: 14.52991452991453%;
+	}
+
+	.five-sixths {
+		width: 82.90598290598291%;
+	}
+
+	.first {
+		clear: both;
+		margin-left: 0;
+	}
+
+	/* Entry Misc.
+	--------------------------------------------- */
+
+	.after-entry,
+	.archive-description,
+	.author-box,
+	.comment-respond,
+	.entry,
+	.entry-comments,
+	.entry-pings {
+		margin-bottom: 60px;
+	}
+
+	/* Footer Widgets
+	--------------------------------------------- */
+
+	.footer-widgets .wrap {
+		max-width: 1140px;
+	}
+
+	.footer-widget-area {
+		float: left;
+		margin-bottom: 0;
+		width: 33.33%; /* fallback for older browsers */
+		width: calc(100% / 3);
+	}
+
+	/* Custom styles */
+
+	.grid-sizer,
+	.masonry-page .content .entry {
+		float: left;
+		width: 32%; /* 4 columns. { 100 - [(number of columns - 1) x gutter width] } / number of columns */
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.masonry-page .site-inner {
+		padding: 60px 0 0 0;
+	}
+
 }
